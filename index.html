@@ -112,7 +112,7 @@
         const shuffled = variants.map(v=>({v,id:Math.random()})).sort((a,b)=>a.id-b.id).map(x=>x.v);
         return { text, variants: shuffled, correctIndex: shuffled.indexOf(correct), correctAnswer: correct };
       });
-      questions = all.sort(()=>0.5-Math.random()).slice(0,1);
+      questions = all.sort(()=>0.5-Math.random()).slice(0,30);
       render();
     }
     function render() {
