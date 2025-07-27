@@ -1,9 +1,3 @@
 [build]
 command = "npm run build" # Или "yarn build" если используете Yarn
 publish = ".next" # Директория, куда Next.js помещает собранные файлы
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
-force = false
