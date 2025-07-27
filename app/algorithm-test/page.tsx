@@ -59,7 +59,7 @@ export default function AlgorithmTest() {
 
   useEffect(() => {
     const shuffled = [...quizDataAlgorithm].sort(() => 0.5 - Math.random())
-    const selected = shuffled.slice(0, 3)
+    const selected = shuffled.slice(0, 30)
 
     const questionsWithShuffledAnswers = selected.map((q) => ({
       question: q.question,
@@ -68,7 +68,7 @@ export default function AlgorithmTest() {
     }))
 
     setQuestions(questionsWithShuffledAnswers)
-    setUserAnswers(new Array(3).fill(""))
+    setUserAnswers(new Array(30).fill(""))
   }, [])
 
   const handleAnswerSelect = (answerText: string) => {
